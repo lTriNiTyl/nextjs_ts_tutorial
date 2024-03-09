@@ -27,6 +27,7 @@ const Links = () => {
   // 반응형 메뉴를 위한 상태값
   const [open, setOpen] = useState(false);
 
+  // temp
   const session = false;
   const isAdmin = true;
 
@@ -39,7 +40,7 @@ const Links = () => {
         {session ? (
           <>
             {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
-            <button className="font-bold py-2 px-4 rounded bg-white text-black">Logout</button>
+            <button className="py-2 px-4 rounded-lg bg-white text-black">Logout</button>
           </>
         ) : (
           <NavLink item={{ title: "Login", path: "/login" }} />
@@ -47,7 +48,7 @@ const Links = () => {
       </div>
       <button className={styles.menuButton} onClick={() => setOpen((prev) => !prev)}>Menu</button>
       {
-        open && <div className={styles.mobileLinks}>
+        open && <div className="uppercase hidden sm:inline">
           {links.map((link) => (
             <NavLink item={link} key={link.title} />
           ))}
