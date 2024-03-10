@@ -11,8 +11,9 @@ const NavLink = ({ item }: any) => {
 
   return (
     <Link 
+      rel='preload'
       href={item.path} 
-      className={`inline-block min-w-14 p-4 rounded-xl text-center font-semibold
+      className={`inline-flex min-w-14 p-4 rounded-xl text-center font-semibold
         ${pathName === item.path && "border-2 border-violet-500 bg-violet-700"} hover:ring-violet-500 hover:ring focus:ring-violet-300`
       }
     >

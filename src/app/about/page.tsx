@@ -34,6 +34,9 @@ const AboutPage = () => {
         <Image src="/about.png"
           alt="" 
           fill
+          priority={true}
+          placeholder='empty'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="h-auto mx-auto max-w-fit rounded-xl object-contain"
         />
       </div>

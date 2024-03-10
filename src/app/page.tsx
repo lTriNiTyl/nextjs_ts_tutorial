@@ -16,12 +16,23 @@ export default function Home() {
           <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-white text-blue-700">Contact</button>
         </div>
         <div className="relative w-96 h-10 grayscale flex-col gap-12">
-          <Image src="/brands.png" alt="" fill className={styles.brandImg} />
+          <Image
+            src="/brands.png"
+            alt=""
+            fill
+            priority={true}
+            placeholder='empty'
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={styles.brandImg} />
         </div>
       </div>
       <div className="flex-1 relative uppercase hidden sm:inline">
-        <Image src="https://images.pexels.com/photos/20219544/pexels-photo-20219544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-          alt="" fill 
+        <Image src="https://images.pexels.com/photos/20219544/pexels-photo-20219544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          fill
+          priority={true}
+          placeholder='empty'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="h-auto mx-auto max-w-fit rounded-xl shadow-xl scale-x-125 object-center"
         />
       </div>
