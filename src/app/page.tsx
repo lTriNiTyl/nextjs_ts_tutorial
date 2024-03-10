@@ -4,8 +4,8 @@ import styles from "./home.module.css";
 export default function Home() {
   // throw new Error("Error in Home");
   return (
-    <div className="flex gap-100">
-      <div className="flex-1">
+    <div className="flex gap-32">
+      <div className="flex-1 gap-20">
         <h1 className="text-7xl font-bold leading-tight pr-10">Create Thoughts Agency.</h1>
         <p className="text-sm font-bold py-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero
@@ -22,7 +22,7 @@ export default function Home() {
       <div className="flex-1 relative uppercase hidden sm:inline">
         <Image src="https://images.pexels.com/photos/20219544/pexels-photo-20219544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
           alt="" fill 
-          className="h-auto mx-auto max-w-fit rounded-xl shadow-xl scale-x-125 translate-x-14 object-center"
+          className="h-auto mx-auto max-w-fit rounded-xl shadow-xl scale-x-125 object-center"
         />
       </div>
     </div>

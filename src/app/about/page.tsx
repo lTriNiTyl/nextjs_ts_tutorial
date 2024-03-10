@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const AboutPage = () => {
   return (
-    <div className="flex gap-24">
-      <div className="flex-1 flex flex-col gap-10">
+    <div className="flex gap-32">
+      <div className="flex-1 flex flex-col gap-16">
         <h2 className="text-base font-bold text-blue-600">About Agency</h2>
         <h1 className="text-4xl font-bold leading-tight">
           We create digital ideas that are bigger, bolder, braver and better.
@@ -31,10 +31,10 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="flex-1 relative uppercase hidden sm:inline">
-        <Image src="https://images.pexels.com/photos/20230202/pexels-photo-20230202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        <Image src="/about.png"
           alt="" 
           fill
-          className="h-auto mx-auto max-w-fit rounded-xl shadow-xl"
+          className="h-auto mx-auto max-w-fit rounded-xl object-contain"
         />
       </div>
     </div >
