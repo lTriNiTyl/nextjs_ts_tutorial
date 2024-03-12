@@ -1,23 +1,11 @@
+"use client";
+
 import React from 'react'
 import Image from 'next/image'
 
-const MImage = () => {
-  return (
-    <Image
-      src='/contact.png'
-      alt='contact image'
-      fill
-      priority={true}
-      placeholder='empty'
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      className="h-auto mx-auto max-w-fit object-contain"
-    />
-  );
-}
-
 const ContactPage = () => {
   return (
-    <div className="flex items-center gap-32">
+    <div className="flex items-center gap-32 max-md:flex-col">
       <div className="flex-1 h-[500px] relative">
         <Image
           src='/contact.png'

@@ -4,18 +4,18 @@ import styles from "./home.module.css";
 export default function Home() {
   // throw new Error("Error in Home");
   return (
-    <div className="flex gap-32">
+    <div className="flex gap-32 max-xl:flex-col max-xl:text-center">
       <div className="flex-1 gap-20">
-        <h1 className="text-7xl font-bold leading-tight pr-10">Create Thoughts Agency.</h1>
+        <h1 className="text-7xl max-md:text-[64px] font-bold leading-tight pr-10">Create Thoughts Agency.</h1>
         <p className="text-sm font-bold py-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero
           blanditiis adipisci minima reiciendis a autem assumenda dolore.
         </p>
-        <div className="flex gap-5 pb-10">
+        <div className="flex gap-5 pb-10 max-xl:justify-center">
           <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-blue-700 text-white">Learn More</button>
           <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-white text-blue-700">Contact</button>
         </div>
-        <div className="relative w-96 h-10 grayscale flex-col gap-12">
+        <div className="relative w-96 h-10 grayscale flex-col gap-12 max-md:w-[100%]">
           <Image
             src="/brands.png"
             alt=""
