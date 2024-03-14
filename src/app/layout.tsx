@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className="bg-gradient-to-l from-white via-gray to-black">
+      <body className="bg-gradient-to-tl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
         <div className="container">
           <Navbar />
           {children}

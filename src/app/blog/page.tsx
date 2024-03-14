@@ -3,7 +3,7 @@ import React from 'react'
 
 const BlogPage = () => {
   return (
-    <div className="flex flex-wrap gap-5">
+    <div className="flex flex-wrap">
       <div className="w-[30%] max-lg:w-[45%] max-md:w-[100%]">
         <PostCard />
       </div>

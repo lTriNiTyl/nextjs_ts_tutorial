@@ -10,3 +10,17 @@
   background-color: var(--text);
   color: var(--bg);
 }
+
+.svg {
+    background: rgb(226, 56, 56);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 185, 0, 1),
+        rgba(247, 130, 0, 1),
+        rgba(226, 56, 56, 1),
+        rgba(151, 57, 153, 1),
+        rgba(0, 156, 223, 1) 91%
+    );
+    color: black;
+    border: black 2px;
+}

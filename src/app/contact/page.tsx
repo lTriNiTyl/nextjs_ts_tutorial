@@ -5,16 +5,15 @@ import Image from 'next/image'
 
 const ContactPage = () => {
   return (
-    <div className="flex items-center gap-32 max-md:flex-col">
-      <div className="flex-1 h-[500px] relative">
+    <div className="flex items-center gap-32 max-md:gap-0 max-md:flex-col">
+      <div className="flex-1 h-[500px] relative overflow-hidden">
         <Image
           src='/contact.png'
           alt='contact image'
           fill
-          priority={true}
-          placeholder='empty'
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="h-auto mx-auto max-w-fit object-contain"
+          loading='lazy'
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
+          className="h-auto mx-auto max-w-fit object-cover max-md:hidden"
         />
       </div>
       <div className='flex-1'>
