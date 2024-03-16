@@ -4,36 +4,42 @@ import styles from "./home.module.css";
 export default function Home() {
   // throw new Error("Error in Home");
   return (
-    <div className="flex gap-32 max-md:flex-col max-md:text-center">
-      <div className="flex-1 gap-20">
-        <h1 className="text-7xl max-md:text-[64px] font-bold leading-tight pr-10">Create Thoughts Agency.</h1>
-        <p className="text-sm font-bold py-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero
-          blanditiis adipisci minima reiciendis a autem assumenda dolore.
-        </p>
-        <div className="flex gap-5 pb-10 max-xl:justify-center">
-          <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-blue-700 text-white">Learn More</button>
-          <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-white text-blue-700">Contact</button>
+    <section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
+        <div className="col-span-1 lg:col-span-1 place-self-center text-center lg:text-left order-2 lg:order-1">
+          <h1 className="text-6xl lg:text-7xl font-bold mt-6 lg:mt-0 mb-6 lg:mb-10 leading-tight">Create Thoughts Agency.</h1>
+          <p className="text-sm font-bold mb-10 lg:text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero
+            blanditiis adipisci minima reiciendis a autem assumenda dolore.
+          </p>
+          <div className="flex relative gap-5 pb-10 max-[1024px]:justify-center">
+            <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-blue-700 text-white">Learn More</button>
+            <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-white text-blue-700">Contact</button>
+          </div>
+          <div className="flex w-full justify-center items-center lg:justify-normal lg:items-baseline pb-10">
+            <div className="relative w-96 min-h-10 grayscale">
+              <Image
+                src="/brands.png"
+                alt="brands image"
+                fill
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
+                className="ml-8 lg:ml-0"/>
+            </div>
+          </div>
         </div>
-        <div className="relative w-96 h-10 grayscale flex-col gap-12 max-md:w-[100%]">
-          <Image
-            src="/brands.png"
-            alt=""
-            fill
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
-            className={styles.brandImg} />
+        <div className="flex items-center lg:col-span-1 col-span-1 place-self-center order-1 lg:order-2 w-full h-full">
+          <div className="relative w-full h-[30svh] sm:h-[45svh] lg:h-[55svh]">
+            <Image src="https://images.pexels.com/photos/13895589/pexels-photo-13895589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="home image"
+              fill
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
+              className="rounded-xl shadow-lg object-cover"
+            />
+          </div>
         </div>
       </div>
-      <div className="flex-1 relative overflow-hidden">
-        <Image src="https://images.pexels.com/photos/13895589/pexels-photo-13895589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt=""
-          fill
-          priority={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
-          className="h-full w-full max-w-fit object-cover rounded-xl shadow-xl object-center"
-        />
-      </div>
-    </div>
+    </section>
   );
 }
