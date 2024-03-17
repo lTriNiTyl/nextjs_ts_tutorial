@@ -4,10 +4,16 @@ import React, { useState } from 'react'
 import styles from './links.module.css'
 import NavLink from './navLink/navLink';
 import Link from 'next/link';
+import { HomeIcon, AboutIcon, ContactIcon, BlogIcon, LoginIcon, AdminIcon, LogoutIcon } from '../../../../public/svg';
 
-import { HomeIcon, AboutIcon, ContactIcon, BlogIcon, LoginIcon } from '../../../../public/svg';
+interface iNavigation {
+  title: string
+  path: string
+  mobile: boolean
+  icon: React.ComponentType
+};
 
-export const links = [
+const links: iNavigation[] = [
   {
     title: "Homepage",
     path: "/",
@@ -28,7 +34,7 @@ export const links = [
   },
   {
     title: "Blog",
-    path: "/blog" || "/blog/post",
+    path: "/blog",
     mobile: false,
     icon: BlogIcon
   },
@@ -39,7 +45,7 @@ const Links = () => {
   const [open, setOpen] = useState(false);
 
   // temp
-  const session = false;
+  const session = true;
   const isAdmin = true;
 
   return (
@@ -51,10 +57,10 @@ const Links = () => {
           </div>
         )))}
         {session ? (
-          <div>
-            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
-            <button className="py-2 px-4 rounded-lg bg-white text-black">Logout</button>
-          </div>
+          <>
+            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin", icon: AdminIcon, mobile: false }} />}
+            <NavLink item={{ title: "Logout", path: "/logout", icon: LogoutIcon, mobile: false }} />
+          </>
         ) : (
           <div className="flex flex-row relative justify-center items-center gap-[10px]">
             <NavLink item={{ title: "Login", path: "/login", icon: LoginIcon, mobile: false }} />
@@ -67,9 +73,18 @@ const Links = () => {
             <NavLink item={{ title: link.title, path: link.path, icon: link.icon, mobile: true }} key={link.title} />
           </Link>
         )))}
+        {session ? (
+        <>
+            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin", icon: AdminIcon, mobile: true }} />}
+            <NavLink item={{ title: "Logout", path: "/logout", icon: LogoutIcon, mobile: true }} />
+        </>
+        ) : (
+        <>
         <Link href="/login" key='Login'>
           <NavLink item={{ title: "Login", path: "/login", icon: LoginIcon, mobile: true }} />
         </Link>
+        </>
+        )}
       </div>
     </div>
   )

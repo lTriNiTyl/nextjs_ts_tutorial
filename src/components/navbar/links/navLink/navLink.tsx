@@ -22,15 +22,17 @@ const NavLink = ({ item }: any) => {
           <item.icon
             className={`${checkActivePath(item.path) && "text-[gold]"} hidden max-md:block hover:text-[gold]`}
             color="#FBA834"
-            width={30}
-            height={30} />
+            width={20}
+            height={20} />
         </div>
       ) : (
-        <div key={item.title} className={`${checkActivePath(item.path) && "border-b-[3px] border-b-violet-500"} group flex flex-row relative justify-center items-center gap-[10px] hover:border-b-violet-500 hover:border-b-[3px]`}>
+        <div key={item.title} className={`${checkActivePath(item.path) && "border-b-[3px] border-b-violet-500"}
+          group flex flex-row relative gap-[10px] hover:border-b-violet-300 hover:border-b-[3px]`}>
           <Link
             key={item.title}
             href={item.path}
-            className={`${checkActivePath(item.path) ? "active" : ""} gap-5 inline-flex min-w-14 p-2 text-center font-semibold`}
+            className={`${checkActivePath(item.path) ? "active" : ""} gap-3 inline-flex min-w-14 p-2 items-center 
+              text-center font-semibold`}
           >
             <item.icon
               className={`${checkActivePath(item.path) && "text-[gold]"} max-[1024px]:hidden group-hover:text-[gold]`}
