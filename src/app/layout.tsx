@@ -16,7 +16,9 @@ export default function RootLayout({
   return (
     <html>
       <body className="bg-gradient-to-tl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
-        <div className="container">
+        <div className="max-[1536px]:w-[1366px] max-[1366px]:w-[1280px] max-[1280px]:w-[1024px] 
+                        max-[1024px]:w-[768px] max-[768px]:w-[640px] max-[640px]:w-[475px] 
+                        m-auto pl-[50px] pr-[50px] min-h-[100lvh] flex flex-col justify-between">
           <Navbar />
           {children}
           <Footer />

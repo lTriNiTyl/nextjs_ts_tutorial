@@ -3,28 +3,33 @@ import styles from "./home.module.css";
 
 export default function Home() {
   // throw new Error("Error in Home");
+  const title = "Create\nThoughts\nAgency.";
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
-        <div className="col-span-1 lg:col-span-1 place-self-center text-center lg:text-left order-2 lg:order-1">
-          <h1 className="text-6xl lg:text-7xl font-bold mt-6 lg:mt-0 mb-6 lg:mb-10 leading-tight">Create Thoughts Agency.</h1>
+        <div className="col-span-1 lg:col-span-1 place-self-center lg:place-self-start text-center 
+          lg:text-left order-2 lg:order-1">
+          <h1 className="whitespace-pre-line leading-tight lg:leading-tight text-6xl lg:text-7xl 
+            font-bold mt-6 lg:mt-0 mb-6 lg:mb-10">{title}</h1>
           <p className="text-sm font-bold mb-10 lg:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vero
             blanditiis adipisci minima reiciendis a autem assumenda dolore.
           </p>
-          <div className="flex relative gap-5 pb-10 max-[1024px]:justify-center">
+          <div className="flex relative gap-5 mb-6 max-[1024px]:justify-center">
             <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-blue-700 text-white">Learn More</button>
             <button className="min-w-28 min-h-14 rounded-lg cursor-pointer border-none bg-white text-blue-700">Contact</button>
           </div>
-          <div className="flex w-full justify-center items-center lg:justify-normal lg:items-baseline pb-10">
-            <div className="relative w-96 min-h-10 grayscale">
+          <div className="inline-flex justify-around items-stretch relative lg:justify-normal lg:items-baseline 
+            mb-10 lg:mb-0">
+            <div className="grayscale w-full">
               <Image
                 src="/brands.png"
                 alt="brands image"
-                fill
+                width={0}
+                height={0}
                 priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
-                className="ml-8 lg:ml-0"/>
+                className="w-[384px] h-[38.4px] ml-9 lg:ml-0"/>
             </div>
           </div>
         </div>
