@@ -28,8 +28,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* 이미지가 수직으로 중앙에 오지 않아서 애먹음.
+          flex items-center(수직 중앙) justify-center(수평 중앙) 추가로 수정.
+        */}
         <div className="flex items-center lg:col-span-1 col-span-1 place-self-center order-1 lg:order-2 w-full h-full">
-          <div className="relative w-full h-[30svh] sm:h-[45svh] lg:h-[55svh]">
+          <div className="relative w-full h-[30lvh] sm:h-[45lvh] lg:h-[55lvh]">
             <Image src="https://images.pexels.com/photos/13895589/pexels-photo-13895589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="home image"
               fill

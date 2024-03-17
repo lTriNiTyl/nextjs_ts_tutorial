@@ -21,7 +21,9 @@ const postCard = () => {
       <div className="bottom">
         <h1 className="text-xl font-bold mb-4 w-[90%]">Title</h1>
         <p className="mb-4 font-light text-xs w-[90%] text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad veritatis eaque quia reprehenderit a officia. Culpa tempora libero et, fugiat perferendis impedit cupiditate sint harum, quibusdam, rerum laboriosam assumenda!</p>
-        <Link className="text-sm underline" href="/blog/post">READ MORE</Link>
+        <Link className="text-sm underline" href="/blog/post">
+          READ MORE
+        </Link>
       </div>
     </div>
   )

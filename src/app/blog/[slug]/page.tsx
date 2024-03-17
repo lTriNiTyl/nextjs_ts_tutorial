@@ -5,6 +5,7 @@ const SinglePostPage = () => {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20">
+        {/* 레이아웃의 width에 맞게 이미지를 위치시킬려면 부모 div에 w-full 추가 */}
         <div className="flex items-center col-span-1 lg:place-self-start place-self-center w-full h-full">
           <div className="w-full h-[calc(55svh-100px)] lg:h-[calc(100svh-200px)] relative">
             <Image
