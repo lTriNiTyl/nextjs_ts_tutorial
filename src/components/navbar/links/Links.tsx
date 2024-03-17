@@ -74,16 +74,16 @@ const Links = () => {
           </Link>
         )))}
         {session ? (
-        <>
+          <>
             {isAdmin && <NavLink item={{ title: "Admin", path: "/admin", icon: AdminIcon, mobile: true }} />}
             <NavLink item={{ title: "Logout", path: "/logout", icon: LogoutIcon, mobile: true }} />
-        </>
+          </>
         ) : (
-        <>
-        <Link href="/login" key='Login'>
-          <NavLink item={{ title: "Login", path: "/login", icon: LoginIcon, mobile: true }} />
-        </Link>
-        </>
+          <>
+            <Link href="/login" key='Login'>
+              <NavLink item={{ title: "Login", path: "/login", icon: LoginIcon, mobile: true }} />
+            </Link>
+          </>
         )}
       </div>
     </div>
