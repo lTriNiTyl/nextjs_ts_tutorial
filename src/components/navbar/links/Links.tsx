@@ -28,7 +28,7 @@ export const links = [
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "/blog" || "/blog/post",
     mobile: false,
     icon: BlogIcon
   },
