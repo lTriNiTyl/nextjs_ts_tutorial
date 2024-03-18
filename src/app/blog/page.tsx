@@ -1,23 +1,38 @@
+"use client"
+
 import PostCard from '@/components/postCard/postCard'
-import React from 'react'
+import React, { useState } from 'react'
+import Loading from '../loading';
 
 const BlogPage = () => {
+  const [loading, setLoading] = useState(true);
+  const [postsData, setPostsData] = useState<any[]>([]);
+
+  React.useEffect(() => {
+    const fetchPosts = async () => {
+      const url = "https://jsonplaceholder.typicode.com/posts";
+      const response = await fetch(url, { next: { revalidate: 3600 } });
+      const json = await response.json();
+      setPostsData(json);
+      setLoading(false);
+    };
+    fetchPosts();
+  }, [])
+
   return (
     <section>
-      <div className="flex-wrap gap-[30px] w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center mb-10">
-        <div className="col-span-1 w-[100%]">
-          <PostCard />
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="flex-wrap gap-[30px] w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start mb-10">
+          {/* filter로 userid가 1인 데이터만 map해서 postcard로 넘김 */}
+          {postsData.filter(post => ( post.userId === 4 )).map((post: any) => (
+            <div className="col-span-1 w-[100%]" key={post.id}>
+              <PostCard post={post} />
+            </div>
+          ))}
         </div>
-        <div className="col-span-1 w-[100%]">
-          <PostCard />
-        </div>
-        <div className="col-span-1 w-[100%]">
-          <PostCard />
-        </div>
-        <div className="col-span-1 w-[100%]">
-          <PostCard />
-        </div>
-      </div>
+      )}
     </section>
   )
 }
