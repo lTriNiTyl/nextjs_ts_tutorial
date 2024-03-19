@@ -16,7 +16,6 @@ const SinglePostPage = ({ params }: any) => {
       const url = "https://jsonplaceholder.typicode.com/posts/";
       const response = await fetch(url + `${slug}`, { cache: "no-store" });
       const json = await response.json();
-      console.log(json);
       setPostsData(json);
       setLoading(false);
     };

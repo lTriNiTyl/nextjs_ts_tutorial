@@ -20,7 +20,7 @@ const NavLink = ({ item }: any) => {
       {item.mobile ? (
         <div className="flex flex-row gap-[20px] justify-center items-center relative">
           <item.icon
-            className={`${checkActivePath(item.path) && "text-[gold]"} hidden max-md:block hover:text-[gold]`}
+            className={`${checkActivePath(item.path) && "text-[gold]"} hidden cursor-pointer max-md:block hover:text-[gold]`}
             color="#FBA834"
             width={20}
             height={20} />
