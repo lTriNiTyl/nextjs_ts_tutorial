@@ -17,10 +17,14 @@ export default function RootLayout({
     <html>
       <body className="bg-gradient-to-tl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
         <div className="max-[1536px]:w-[1366px] max-[1366px]:w-[1280px] max-[1280px]:w-[1024px] 
-                        max-[1024px]:w-[768px] max-[768px]:w-[640px] max-[640px]:w-[475px] 
-                        m-auto pl-[50px] pr-[50px] min-h-[100lvh] flex flex-col justify-between">
-          <Navbar />
-          {children}
+                        max-[1024px]:w-[768px] max-[768px]:w-[640px] max-[640px]:w-[475px] max-[475px]:w-[450px]
+                        min-h-[100lvh] flex flex-col justify-between">
+          <div className="w-screen sticky top-0 start-0 z-50 border-b border-gray-900 rounded-xl shadow-xl bg-gradient-to-l from-[#0d0c22] via-[#29266a] to-[#443fb3]">
+            <Navbar />
+          </div>
+          <div className="w-screen m-auto h-auto pl-[50px] pr-[50px]">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>
