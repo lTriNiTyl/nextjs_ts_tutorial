@@ -1,6 +1,7 @@
+import { getUsers } from '@/lib/blogData';
 import React, { useState } from 'react'
 
-const postUser = ({ userId }: {userId: number}) => {
+const postUser = ( userId : {userId: object}) => {
   const [loading, setLoading] = useState(true);
   // json data가 array가 아니기 때문에 any[] -> any로 변경.
   // property username does not exist on type any[] 메시지 사라짐.
@@ -8,9 +9,7 @@ const postUser = ({ userId }: {userId: number}) => {
 
   React.useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, { cache: "no-store" });
-      const json = await response.json();
-      console.log(json);
+      const json = await getUsers(userId);
       setUsersData(json);
       setLoading(false);
     };

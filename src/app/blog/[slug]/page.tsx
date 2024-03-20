@@ -2,6 +2,7 @@
 
 import Loading from '@/app/loading';
 import PostUser from '@/components/postUser/postUser';
+import { getPost } from '@/lib/blogData';
 import Image from 'next/image'
 import React, { useState } from 'react'
 
@@ -13,9 +14,7 @@ const SinglePostPage = ({ params }: any) => {
 
   React.useEffect(() => {
     const fetchPosts = async () => {
-      const url = "https://jsonplaceholder.typicode.com/posts/";
-      const response = await fetch(url + `${slug}`, { cache: "no-store" });
-      const json = await response.json();
+      const json = await getPost(slug);
       setPostsData(json);
       setLoading(false);
     };
