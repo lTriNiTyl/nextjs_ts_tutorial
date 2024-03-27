@@ -21,15 +21,13 @@ export default function Home() {
           </div>
           <div className="inline-flex justify-around items-stretch relative lg:justify-normal lg:items-baseline 
             mb-10 lg:mb-0">
-            <div className="grayscale w-full">
+            <div className="grayscale w-[400px] h-[38.4px] relative">
               <Image
                 src="/brands.png"
-                alt="brands image"
-                width={0}
-                height={0}
-                priority={true}
+                alt="brands"
+                fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 45vw, 30vw"
-                className="w-[384px] h-[38.4px] ml-9 lg:ml-0"/>
+                className="ml-9 lg:ml-0"/>
             </div>
           </div>
         </div>

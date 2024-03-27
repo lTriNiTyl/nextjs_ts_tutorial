@@ -15,17 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className="max-[1536px]:w-[1366px] max-[1366px]:w-[1280px] max-[1280px]:w-[1024px] 
-                        max-[1024px]:w-[768px] max-[768px]:w-[640px] max-[640px]:w-[475px] max-[475px]:w-[450px] 
-                        bg-gradient-to-tl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
-        <div className="min-h-[100vh] flex flex-col justify-between h-auto relative">
-          <div className="w-screen sticky top-0 start-0 z-20 rounded-xl bg-gradient-to-bl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
+      <body className="container bg-gradient-to-tl from-[#0d0c22] via-[#29266a] to-[#443fb3]
+                        text-white bg-[#29266a]">
+        <div className="min-h-[85vh] flex flex-col justify-between h-auto relative">
+          <div className="w-screen fixed top-0 start-0 z-20 rounded-xl bg-gradient-to-bl from-[#0d0c22] via-[#29266a] to-[#443fb3]">
             <Navbar />
           </div>
-          <div className="w-screen pl-[50px] pr-[50px]">
-            {children}
+          <div className="w-screen px-[50px]">
+          {children}
           </div>
-          <div className="w-screen pl-[50px] pr-[50px]">
+          <div className="w-screen px-[50px]">
             <Footer />
           </div>
         </div>
